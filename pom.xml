@@ -183,7 +183,7 @@
         <profile>
             <id>local</id>
             <properties>
-                <liquibase.url>postgres://dbpwjgxpyalozf:tETijsIe4GwEy3fuiUSyZMHs2S@ec2-107-20-166-28.compute-1.amazonaws.com:5432/d53d1tr5jfo6ml</liquibase.url>
+                <liquibase.url>jdbc:postgresql://ec2-107-20-166-28.compute-1.amazonaws.com:5432/d53d1tr5jfo6ml</liquibase.url>
                 <liquibase.username>dbpwjgxpyalozf</liquibase.username>
                 <liquibase.password>tETijsIe4GwEy3fuiUSyZMHs2S</liquibase.password>
             </properties>
