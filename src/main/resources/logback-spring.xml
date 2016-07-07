@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/base.xml" />
+    <springProfile name="dev,staging,local">
+        <logger name="org.springframework.web" level="DEBUG" additivity="false">
+            <appender-ref ref="CONSOLE" />
+        </logger>>
+    </springProfile>
+    <springProfile name="production">
+    <logger name="org.springframework.web" level="WARN" additivity="false">
+        <appender-ref ref="FILE" />
+    </logger>
+    </springProfile>
+    <if condition='"local".equals("${spring.profiles.active}")'>
+        <then>
+            <logger name="com.mycompany.application" level="INFO" additivity="false">
+                <appender-ref ref="CONSOLE" />
+            </logger>
+        </then>
+        <else>
+            <logger name="com.mycompany.application" level="INFO" additivity="false">
+                <appender-ref ref="CONSOLE" />
+            </logger>
+        </else>
+    </if>
+</configuration>
