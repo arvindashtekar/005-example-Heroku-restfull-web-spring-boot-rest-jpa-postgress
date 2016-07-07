@@ -1,2 +1,2 @@
-migrate: java -jar target/dependency/liquibase.jar --changeLogFile=src/main/resources/migrations.xml
+migrate: java -jar target/dependency/liquibase.jar --changeLogFile=src/main/resources/migrations.xml --url=$JDBC_DATABASE_URL --classpath=target/dependency/postgres.jar update
 web: java -Dserver.port=$PORT -jar  target/system.web-0.0.1-SNAPSHOT.jar
